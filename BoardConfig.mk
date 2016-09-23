@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TW_THEME := portrait_hdpi
+
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/gemini

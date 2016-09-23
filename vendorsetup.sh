@@ -1,1 +1,2 @@
-add_lunch_combo cm_gemini-userdebug
+add_lunch_combo pac_gemini-userdebug
+add_lunch_combo pac_gemini-user
