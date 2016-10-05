@@ -61,6 +61,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_BOARD_PLATFORM := msm8996
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
+# Releasetools		
+TARGET_RELEASETOOLS_EXTENSIONS := device/qcom/common
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
@@ -108,7 +111,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
     $(DEVICE_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input1/wake_gesture"
 
