@@ -18,17 +18,18 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Include ParanoidAndroid common configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+
+include device/qcom/common/common.mk
+
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+include vendor/pa/main.mk
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cm_gemini
+PRODUCT_NAME := pa_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 5
