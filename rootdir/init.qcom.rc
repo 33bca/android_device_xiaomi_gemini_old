@@ -518,8 +518,8 @@ service qmuxd /system/bin/qmuxd
     user root
     group radio audio bluetooth gps nfc qcom_diag
 
-service netmgrd /system/bin/netmgrd
-    class main
+#service netmgrd /system/bin/netmgrd
+#    class main
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
@@ -796,3 +796,8 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
+
+# Data Switch hack
+service netmgrd /system/bin/sh /system/etc/netmgrd_control.sh
+   seclabel u:r:netmgrd:s0
+   class main
