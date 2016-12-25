@@ -50,7 +50,7 @@ on charger
     write /sys/module/msm_thermal/parameters/enabled "N"
     start hvdcp_opti
 
-on enable-low-power
+on property:sys.boot_completed=1
     # Disable thermal BCL hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/soc/soc:qcom,bcl/mode "disable"
