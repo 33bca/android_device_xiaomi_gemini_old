@@ -15,18 +15,21 @@
 # limitations under the License.
 #
 
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/xiaomi/gemini/configs/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Nitrogen stuff.
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_gemini
+PRODUCT_NAME := nitrogen_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 5
@@ -37,7 +40,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="gemini" \
     PRODUCT_NAME="gemini" \
-    BUILD_FINGERPRINT="Xiaomi/gemini/gemini:7.0/NRD90M/6.12.22:user/release-keys" \
-    PRIVATE_BUILD_DESC="gemini-user 7.0 NRD90M 6.12.22 release-keys"
+    BUILD_FINGERPRINT="Xiaomi/gemini/gemini:7.0/NRD90M/6.12.15:user/release-keys" \
+    PRIVATE_BUILD_DESC="gemini-user 7.0 NRD90M 6.12.15 release-keys"
 
 TARGET_VENDOR := Xiaomi
