@@ -96,7 +96,7 @@
     <integer-array name="config_autoBrightnessButtonBacklightValues">
     </integer-array>
 
-    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    <!--<bool name="config_deviceHasVariableButtonBrightness">true</bool>-->
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
@@ -445,7 +445,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">65</integer>
+    <!--<integer name="config_deviceHardwareWakeKeys">65</integer>-->
 
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
@@ -469,7 +469,7 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnAppSwitchBehavior">1</integer>
+    <!--<integer name="config_longPressOnAppSwitchBehavior">1</integer>-->
 
     <!-- The list absolute paths of jar/apk files containing the device specific handlers,
          delimited by File.pathSeparator, which defaults to ":" on Android -->
