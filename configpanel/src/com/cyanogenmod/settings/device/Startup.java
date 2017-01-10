@@ -27,8 +27,7 @@ import android.util.Log;
 import java.io.File;
 
 import com.cyanogenmod.settings.device.utils.Constants;
-
-import org.cyanogenmod.internal.util.FileUtils;
+import com.cyanogenmod.settings.device.utils.FileUtils;
 
 public class Startup extends BroadcastReceiver {
 
@@ -37,7 +36,7 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent intent) {
         final String action = intent.getAction();
-        if (cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE.equals(action)) {
+        if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
 
             // Disable button settings if needed
             if (!hasButtonProcs()) {

@@ -22,9 +22,6 @@ LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PACKAGE_NAME := ConfigPanel
 
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.cyanogenmod.platform.internal
-
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 
 LOCAL_RESOURCE_DIR := \

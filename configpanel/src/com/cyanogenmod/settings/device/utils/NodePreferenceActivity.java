@@ -28,8 +28,7 @@ import android.view.MenuItem;
 
 import java.io.File;
 
-import org.cyanogenmod.internal.util.FileUtils;
-import org.cyanogenmod.internal.util.ScreenType;
+import com.cyanogenmod.settings.device.utils.FileUtils;
 
 public class NodePreferenceActivity extends PreferenceActivity
         implements OnPreferenceChangeListener {
@@ -44,11 +43,7 @@ public class NodePreferenceActivity extends PreferenceActivity
     protected void onResume() {
         super.onResume();
         updatePreferencesBasedOnDependencies();
-
-        // If running on a phone, remove padding around the listview
-        if (!ScreenType.isTablet(this)) {
             getListView().setPadding(0, 0, 0, 0);
-        }
     }
 
     @Override
