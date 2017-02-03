@@ -1,32 +1,7 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-    audio_hal.period_size=192 \
-    audio.deep_buffer.media=true \
-    audio.offload.buffer.size.kb=64 \
-    audio.offload.gapless.enabled=true \
     audio.offload.min.duration.secs=15 \
-    audio.offload.multiaac.enable=true \
-    audio.offload.multiple.enabled=true \
-    audio.offload.passthrough=false \
-    audio.offload.pcm.16bit.enable=true \
-    audio.offload.pcm.24bit.enable=true \
-    audio.offload.track.enable=false \
-    audio.offload.video=true \
-    audio.safx.pbe.enabled=true \
-    audio.parser.ip.buffer.size=262144 \
-    audio.dolby.ds2.enabled=false \
-    audio.dolby.ds2.hardbypass=false \
-    qcom.hw.aac.encoder=true \
-    tunnel.audio.encode=false \
-    use.voice.path.for.pcm.voip=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qc.sdk.audio.ssr=false \
-    ro.qc.sdk.audio.fluencetype=none \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker=true
+    ro.audio.flinger_standbytime_ms=300
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
