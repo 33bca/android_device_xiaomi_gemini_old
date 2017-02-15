@@ -3,6 +3,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.min.duration.secs=15 \
     ro.audio.flinger_standbytime_ms=300
 
+# Audio fluencetype can be "fluence" or "fluencepro" or "none"
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.fluencetype=fluence
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
